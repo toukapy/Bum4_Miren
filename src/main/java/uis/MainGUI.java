@@ -17,6 +17,9 @@ public class MainGUI {
     private Stage stage;
     private Scene scene;
 
+    /**
+     * Class of the window
+     */
     class Window{
         Parent ui;
         MatchesController c;
@@ -36,9 +39,9 @@ public class MainGUI {
     }
 
     /**
-     *
-     * @param fxmlfile
-     * @return
+     * Method that loads the fxml file
+     * @param fxmlfile - The fxml file of the window
+     * @return Window - The window that goes with the fxml file
      * @throws IOException
      */
     private Window load(String fxmlfile) throws IOException{
@@ -65,8 +68,8 @@ public class MainGUI {
     }
 
     /**
-     *
-     * @param stage
+     * Method that initializes the windows with its fxml and constructor
+     * @param stage - The stage in which the fxml has tp be loaded
      * @throws IOException
      */
     public void init(Stage stage) throws IOException{
@@ -78,18 +81,18 @@ public class MainGUI {
     }
 
     /**
-     *
+     * Method that shows the manager window
      */
     private void showMatches() {
         setupScene(managerWin.ui, "Matches", 950, 555);
     }
 
     /**
-     *
-     * @param ui
-     * @param title
-     * @param width
-     * @param height
+     * Method that sets up the scene specified
+     * @param ui Parent - The ui to be set in the scene
+     * @param title String - The header of the window
+     * @param width int - The width of the window
+     * @param height int - The height of the window
      */
     private void setupScene(Parent ui, String title, int width, int height) {
         if (scene == null){

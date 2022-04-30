@@ -14,11 +14,6 @@ import java.util.List;
 
 public class Manager {
 
-    /**
-     *
-     * @param endpoint
-     * @return
-     */
     public String request(String endpoint){
         String result = "";
 
@@ -42,9 +37,6 @@ public class Manager {
         return result;
     }
 
-    /**
-     *
-     */
     public class Competition{
         public int id;
         public Area area;
@@ -57,10 +49,6 @@ public class Manager {
         int numberOfAvailableSeasons;
         String lastUpdated;
 
-        /**
-         *
-         * @return
-         */
         @Override
         public String toString(){
             return "Competition{"+
@@ -76,26 +64,15 @@ public class Manager {
                     "}";
         }
 
-        /**
-         *
-         * @return
-         */
         public String getEmblemUrl() {
                 return emblemUrl;
         }
     }
 
-    /**
-     *
-     */
     public class Area{
         public int id;
         public String name;
 
-        /**
-         *
-         * @return
-         */
         @Override
         public String toString(){
             return "Area{"+
@@ -105,9 +82,6 @@ public class Manager {
         }
     }
 
-    /**
-     *
-     */
     class Season{
         int id;
         String startDate;
@@ -115,10 +89,6 @@ public class Manager {
         int currentMatchday;
         Object winner;
 
-        /**
-         *
-         * @return
-         */
         @Override
         public String toString(){
             return "Season{"+
@@ -131,10 +101,6 @@ public class Manager {
         }
     }
 
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args){
         Manager manager = new Manager();
         String body = manager.request("competitions");

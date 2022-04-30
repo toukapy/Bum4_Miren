@@ -54,7 +54,7 @@ public class MatchesController {
     List<Manager.Competition> competitions;
 
     /**
-     *
+     * Initializes the components of the window and the access to the database
      */
     public void initialize(){
         initializeCompetitions();
@@ -62,7 +62,7 @@ public class MatchesController {
     }
 
     /**
-     *
+     * Initializes the access to the database
      */
     public void initializeCompetitions(){
         if(jsonObject != null){
@@ -76,7 +76,7 @@ public class MatchesController {
     }
 
     /**
-     *
+     * Initializes the components of the window
      */
     public void initializeTextFields(){
         compIdField.setText(String.valueOf(competitions.get(0).id));
@@ -88,7 +88,7 @@ public class MatchesController {
     }
 
     /**
-     *
+     * Sets the image that corresponds to the current information
      */
     private void setImage() {
         BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
@@ -113,7 +113,7 @@ public class MatchesController {
     }
 
     /**
-     *
+     * Method that goes to the next information
      */
     @FXML
     void onClickNext(){
@@ -131,7 +131,7 @@ public class MatchesController {
     }
 
     /**
-     *
+     * Method that goes to the previous information
      */
     @FXML
     void onClickPrevious(){
